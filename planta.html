@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Planta da Casa - Consumo de Energia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+        }
+        header {
+            background-color: #007bb5;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #007bb5;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .house-plan {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip {
+            visibility: hidden;
+            width: 150px;
+            background-color: #007bb5;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%; /* Posiciona acima da imagem */
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .house-plan:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        .appliance {
+            position: absolute;
+        }
+        .appliance:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Calculadora de Consumo de Energia</h1>
+</header>
+
+<div class="container">
+    <h2>Planta da Casa</h2>
+    <p>Passe o mouse sobre os eletrodomésticos para ver o consumo de energia em kWh.</p>
+
+    <div class="house-plan">
+        <!-- Imagem da planta da casa -->
+        <img src="img/plantacasa.png" alt="Planta da Casa" width="100%" height="auto">
+        
+        <!-- Eletrodomésticos com tooltip -->
+        <div class="appliance" style="top: 7%; left: 73%;">
+            <span class="tooltip">Micro-ondas: 1200W</span>
+        </div>
+        <div class="appliance" style="top: 7%; left: 63%;">
+            <span class="tooltip">Airfryer: 1500W</span>
+        </div>
+        <div class="appliance" style="top: 7%; left: 52%;">
+            <span class="tooltip">Forno Elétrico: 1800W</span>
+        </div>
+        <div class="appliance" style="top: 25%; left: 82%;">
+            <span class="tooltip">Fogão: 1800W</span>
+        </div>
+        <div class="appliance" style="top: 25%; left: 62%;">
+            <span class="tooltip">Liquidificador: 600W</span>
+        </div>
+        <div class="appliance" style="top: 25%; left: 52%;">
+            <span class="tooltip">Batedeira: 400W</span>
+        </div>
+        <div class="appliance" style="top: 18%; left: 97%;">
+            <span class="tooltip">Geladeira: 1000W</span>
+        </div>
+        <div class="appliance" style="top: 95%; left: 60%;">
+            <span class="tooltip">TV (Sala): 300W</span>
+        </div>
+        <div class="appliance" style="top: 35%; left: 45%;">
+            <span class="tooltip">TV (Quarto): 300W</span>
+        </div>
+        <div class="appliance" style="top: 55%; left: 5%;">
+            <span class="tooltip">Chuveiro Elétrico: 2000W</span>
+        </div>
+        <div class="appliance" style="top: 55%; left: 82%;">
+            <span class="tooltip">Ventilador de Teto (Quarto): 75W</span>
+        </div>
+        <div class="appliance" style="top: 5%; left: 22%;">
+            <span class="tooltip">Ventilador de Teto (Quarto): 75W</span>
+        </div>
+        <div class="appliance" style="top: 55%; left: 42%;">
+            <span class="tooltip">Ventilador de Teto (Sala): 75W</span>
+        </div>
+        <!-- Adicionar mais eletrodomésticos conforme necessário -->
+    </div>
+</div>
+
+</body>
+</html>
+
